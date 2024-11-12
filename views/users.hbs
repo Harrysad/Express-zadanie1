@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Users List</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each users}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td>{{this.address.street}}, {{this.address.suite}}, {{this.address.city}}, {{this.address.zipcode}}</td>
+          <td><a href="http://{{this.website}}" target="_blank">{{this.website}}</a></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
