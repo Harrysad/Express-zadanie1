@@ -6,7 +6,7 @@ module.exports = {
             const users = await User
             .find()
             .lean();
-            res.render('users', {users});
+            res.render('home', {users});
         } catch (err) {
             res.status(500).send(err);
         };
